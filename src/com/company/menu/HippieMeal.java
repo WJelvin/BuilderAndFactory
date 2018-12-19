@@ -1,18 +1,25 @@
 package com.company.menu;
 
+import com.company.mealparts.*;
+
 public class HippieMeal implements Meal {
+
+    Burger burger = new LeafBurger();
+    Soda soda = new MediumSoda();
+    SideDish sideDish = new VeggieCookie();
+
     @Override
-    public void getBurger() {
-        return;
+    public Burger getBurger() {
+        return burger;
     }
 
     @Override
-    public void getDrinkSize() {
-        System.out.println("A medium applejuice");
+    public Soda getDrinkSize() {
+        return soda;
     }
 
     @Override
-    public void getSideDish() {
-        System.out.println("A veggie cookie that looks like a dream catcher");
+    public SideDish getSideDish() {
+        return sideDish;
     }
 }
