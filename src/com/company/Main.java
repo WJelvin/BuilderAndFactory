@@ -14,20 +14,28 @@ public class Main {
         MealFactory mealFactory = new MealFactory();
         CustomMealBuilder customMealBuilder = new CustomMealBuilder();
 
-        Meal meal = mealFactory.getMeal("WHUPPER");
-        Meal meal2 = customMealBuilder.setBurger(new LeafBurger())
+        Meal whupperMeal = mealFactory.getMeal("WHUPPER");
+        Meal kindaHappyMeal = mealFactory.getMeal("KINDAHAPPY");
+        Meal customMeal = customMealBuilder.setBurger(new LeafBurger())
                 .setSideDish(new LargeFries())
                 .setSoda(new SmallSoda()).packMeal();
 
-        System.out.println(meal.getBurger());
-        System.out.println(meal.getDrinkSize());
-        System.out.println(meal.getSideDish());
+
+        System.out.println(whupperMeal.getBurger());
+        System.out.println(whupperMeal.getDrinkSize());
+        System.out.println(whupperMeal.getSideDish());
 
         System.out.println();
 
-        System.out.println(meal2.getBurger());
-        System.out.println(meal2.getDrinkSize());
-        System.out.println(meal2.getSideDish());
+        System.out.println(kindaHappyMeal.getBurger());
+        System.out.println(kindaHappyMeal.getDrinkSize());
+        System.out.println(kindaHappyMeal.getSideDish());
+
+        System.out.println();
+
+        System.out.println(customMeal.getBurger());
+        System.out.println(customMeal.getDrinkSize());
+        System.out.println(customMeal.getSideDish());
 
     }
 }
