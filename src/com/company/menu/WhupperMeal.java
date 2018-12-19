@@ -1,22 +1,25 @@
 package com.company.menu;
 
-import com.company.mealparts.Burger;
-import com.company.mealparts.SideDish;
-import com.company.mealparts.Soda;
+import com.company.mealparts.*;
 
 public class WhupperMeal implements Meal {
+
+    Burger burger = new WhupperBurger();
+    Soda soda = new LargeSoda();
+    SideDish sideDish = new LargeFries();
+
     @Override
     public Burger getBurger() {
-        System.out.println("A Whupper burger");
+        return burger;
     }
 
     @Override
     public Soda getDrinkSize() {
-        System.out.println("A large soda");
+        return soda;
     }
 
     @Override
     public SideDish getSideDish() {
-        System.out.println("A large fries");
+        return sideDish;
     }
 }

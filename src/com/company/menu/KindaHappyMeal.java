@@ -1,22 +1,24 @@
 package com.company.menu;
 
-import com.company.mealparts.Burger;
-import com.company.mealparts.SideDish;
-import com.company.mealparts.Soda;
+import com.company.mealparts.*;
 
 public class KindaHappyMeal implements Meal {
+    Burger burger = new TinyBurger();
+    Soda soda = new SmallSoda();
+    SideDish sideDish = new SmallFries();
+
     @Override
     public Burger getBurger() {
-        System.out.println("A tiny burger");
+        return burger;
     }
 
     @Override
     public Soda getDrinkSize() {
-        System.out.println("A small soda");
+        return soda;
     }
 
     @Override
     public SideDish getSideDish() {
-        System.out.println("A small fries");
+        return sideDish;
     }
 }
