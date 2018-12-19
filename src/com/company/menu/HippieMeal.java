@@ -3,7 +3,7 @@ package com.company.menu;
 public class HippieMeal implements Meal {
     @Override
     public void getBurger() {
-        System.out.println("A medium leaf burger");
+        return;
     }
 
     @Override
